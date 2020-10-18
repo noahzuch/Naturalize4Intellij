@@ -1,4 +1,4 @@
-package org.jetbrains.plugins.template
+package com.github.noahzuch.naturalize4intellij
 
 import com.intellij.AbstractBundle
 import org.jetbrains.annotations.NonNls
