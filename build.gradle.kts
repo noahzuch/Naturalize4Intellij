@@ -39,9 +39,12 @@ version = pluginVersion
 repositories {
     mavenCentral()
     jcenter()
+    mavenLocal()
 }
 dependencies {
     detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.14.1")
+
+    implementation("com.github.mast-group:naturalize:1.0")
 }
 
 // Configure gradle-intellij-plugin plugin.
@@ -56,6 +59,7 @@ intellij {
     // Plugin Dependencies. Uses `platformPlugins` property from the gradle.properties file.
     setPlugins(*platformPlugins.split(',').map(String::trim).filter(String::isNotEmpty).toTypedArray())
 }
+
 
 // Configure detekt plugin.
 // Read more: https://detekt.github.io/detekt/kotlindsl.html
